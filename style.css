@@ -1,0 +1,138 @@
+/* font-family: 'Dancing Script', cursive; */
+/* font-family: 'Open Sans', sans-serif; */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+/* header xs */
+.header {
+    /* height: 57px; */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    position: relative;
+}
+.logo-link {
+    display: block;
+    margin-bottom: -25px;
+}
+.logo-img {
+    width: 50px;
+}
+.menu {
+    display: flex;
+    overflow-x: auto;
+}
+nav {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 1px;
+}
+.menu-list {
+    display: flex;
+}
+.menu-item {
+}
+.menu-link {
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 35px;
+    outline: none;
+    border-bottom: 2px solid transparent;
+    display: block;
+}
+.menu-link:hover {
+    border-bottom: 2px solid #fcdb5a;
+}
+.get-in-touch-btn {
+    width: 153px;
+    height: 45px;
+    border-radius: 22.5px;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    color: #1b1b1b;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: auto;
+    cursor: pointer;
+    outline: none;
+    transition: background-color .25s ease-in-out;
+    display: none;
+}
+.get-in-touch-btn:hover {
+    background-color: #fcdb5a;
+    color: #4f4a37;
+}
+/* home xs */
+.home{
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% 0;
+    max-width: 1600px;
+    padding-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -57px;
+    height: 1700px;
+}
+.title-h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 90px;
+    color: #ffffff;
+}
+
+/* adaptation */
+
+@media(min-width:375px) {
+
+}
+
+@media(min-width:570px) {
+    .home {
+        padding-top: 100px;
+    }
+    .title-h1 {
+        font-size: 130px;
+    }
+}
+
+/* tablet sm*/
+@media(min-width:768px) {
+    .title-h1 {
+        font-size: 200px;
+    }
+}
+
+/* laptop md*/
+@media(min-width:992px) {
+    .header {
+    }
+    .logo-img {
+        width: 100px;
+    }
+    .menu {
+        margin-left: 50px;
+    }
+    .menu-link {
+    }
+    .get-in-touch-btn {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+    }
+    /* home min 992px */
+    .home {
+        margin-top: -107px;
+        padding-top: 150px;
+    }
+}
+
+/* desctop lg*/
+@media(min-width:1200px) {
+}
