@@ -111,9 +111,15 @@ nav {
 .item {
     position: relative;
     height: 280px;
+    overflow: hidden;
 }
 .item-vertical {
     height: 560px;
+}
+.item:hover .awesome-img {
+    transform: scale(1.2);
+    transition: all 1s ease;
+    
 }
 .awesome-img {
     object-fit: cover;
@@ -125,8 +131,21 @@ nav {
 .awesome-item__content {
     position: absolute;
     padding: 30px;
+    top: 0;
     bottom: 0;
+    right: 0;
     left: 0;
+}
+.awesome-link {
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+}
+.awesome-gold-link {
+    align-items: center;
+    justify-content: center;
 }
 .awesome-item-title {
     color: #ffffff;
@@ -134,9 +153,14 @@ nav {
     font-weight: 100;
     text-transform: uppercase;
 }
-.awesome-bold {
+.gold-font {
+    color: #fcdb5a;
+    font-size: 40px;
+}
+.bold-font {
     font-weight: 900;
 }
+
 /* adaptation */
 
 @media(min-width:375px) {
