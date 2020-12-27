@@ -88,7 +88,7 @@ nav {
 }
 /* home xs */
 .home{
-    background-image: url(images/bg.jpg);
+    background-image: url(images/bg-home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 70% 0;
@@ -227,8 +227,6 @@ nav {
     .menu {
         align-self: flex-end;
     }
-    .menu-link {
-    }
     .get-in-touch-btn {
         display: flex;
         align-self: center;
@@ -292,10 +290,10 @@ nav {
         transform: translateX(150%);
         transition: all 500ms ease-in-out;
         padding: 50px;
-        background-image: url(images/bg-mobile-menu.jpg);
+        background-image: url(images/bg-home-mobile-menu.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: 40% 40%;
+        background-position: 60% 40%;
         justify-content: center;
     }
     .nav-mobile-menu.active-menu span:nth-child(1) {
@@ -329,6 +327,5 @@ nav {
         font-size: 24px;
         padding: 3px;
         text-transform: uppercase;
-
     }
 }
