@@ -16,10 +16,8 @@ img {
 /* header xs */
 .header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    position: relative;
-    /* position: sticky;
-    top: 0;
-    z-index: 10; */
+    position: absolute;
+    width: 100%;
 }
 .header-row {
     flex-direction: row;
@@ -95,14 +93,13 @@ nav {
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -67px;
-    height: 1700px;
+
 }
 .title-h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 90px;
     color: #ffffff;
-    margin: 100px 0;
+    padding: 100px 0;
 }
 /* awesome */
 .awesome {
@@ -168,6 +165,39 @@ nav {
     font-weight: 900;
 }
 
+/* slogan */
+.section-padding {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.slogan-row {
+    flex-direction: column;
+}
+.slogan-text {
+    margin-top: 35px;
+}
+.slogan-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 47px;
+    line-height: 1.2;
+}
+.slogan-title span:first-child {
+    color: #fcdb5a;
+}
+.slogan-title span:nth-child(2) {
+    color: #db2985;
+}
+.slogan-title span:nth-child(3) {
+    color: #72aa41;
+}
+.slogan-title span:nth-child(4) {
+    color: #f2a137;
+}
+.slogan-title span:nth-child(5) {
+    color: #4fb1c9;
+}
+
+
 /* adaptation */
 
 @media(min-width:375px) {
@@ -193,7 +223,7 @@ nav {
     }
     .title-h1 {
         font-size: 200px;
-        margin: 200px 0;
+        padding: 150px 0;
     }
     /* awesome sm */
     .awesome-row {
@@ -201,6 +231,9 @@ nav {
     }
     .awesome-item {
         position: absolute;
+    }
+    .awesome-item:nth-child(1) {
+        position: static;
     }
     .awesome-item:nth-child(2) {
         left: 33.33%
@@ -215,6 +248,14 @@ nav {
     .awesome-item:nth-child(5) {
         left: 66.66%;
         top: 280px;
+    }
+    /* slogan */
+    .section-padding {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .slogan-title {
+        font-size: 80px;
     }
 
 }
@@ -235,12 +276,32 @@ nav {
     }
     /* home min 992px */
     .home {
-        margin-top: -109px;
+        /* margin-top: -109px; */
+    }
+    /* slogan min 992px */
+    .slogan-row {
+        flex-direction: row;
+    }
+    .slogan-img {
+        width: 120%;
+    }
+    .slogan-text {
+        margin-top: 0px;
     }
 }
 
 /* desctop lg*/
 @media(min-width:1200px) {
+    .title-h1 {
+        padding: 200px 0;
+    }
+    .awesome-body {
+        padding-bottom: 300px;
+    }
+    /* slogan min 1200px */
+    .slogan-title {
+        font-size: 95px;
+    }
 }
 
 /* only mobile */
