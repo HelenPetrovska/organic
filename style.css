@@ -65,19 +65,21 @@ nav {
     justify-content: flex-end;
     align-items: center;
 }
-.get-in-touch-btn {
+.btn {
     width: 153px;
     height: 45px;
     border-radius: 22.5px;
-    background-color: #ffffff;
     text-transform: uppercase;
-    color: #1b1b1b;
     font-size: 12px;
-    font-weight: 600;
-    margin-left: auto;
     cursor: pointer;
     outline: none;
     transition: background-color .25s ease-in-out;
+    font-weight: 600;
+}
+.get-in-touch-btn {
+    background-color: #ffffff;
+    color: #1b1b1b;
+    /* margin-left: auto; */
     display: none;
 }
 .get-in-touch-btn:hover {
@@ -206,8 +208,9 @@ nav {
     margin-bottom: 60px;
 }
 .title__h2 {
-    font-size: 40px;
+    font-size: 39px;
     font-weight: 100;
+    line-height: 1.2;
     text-transform: uppercase;
     text-align: center;
 }
@@ -238,37 +241,95 @@ nav {
 .service-img {
     width: auto;
     height: 55px;
+    margin-bottom: 20px;
 }
 .title__h5 {
     color: #333333;
     font-size: 14px;
     font-weight: bold;
-    margin-top: 20px;
     text-align: center;
 }
-/* people-says xs */
-.people-says {
+/* for-you */
+.for-you {
     position: relative;
+    padding-top: 70px;
+    padding-bottom: 160px;
 }
-.people-says-img {
+.section-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 60% 0;
     z-index: -1;
 }
 .light-h2 {
     color: #ffffff;
 }
-.people-says-row {
+.section-title-left .title__h2 {
+    text-align: left;
+}
+.for-you-discription {
+    font-family: 'Open Sans', sans-serif;
+    color: #c5c5c5;
+    font-size: 14px;
+    line-height: 1.64;
+    margin-top: 30px;
+}
+.discover-btn {
+    background-color: #fcdb5a;
+    color: #4f4a37;
+    border: 2px solid #fcdb5a;
+    margin-top: 25px;
+}
+.discover-btn:hover {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #fcdb5a;
+}
+/* recipes xs */
+.recipes {
+    margin-top: -120px;
+    padding-bottom: 70px;
+}
+.recipes-item-row, .recipes-item-reverse-row {
+    flex-direction: column;
+}
+.recipes-item-content {
+    padding: 15px;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #ffffff;
+}
+.recipes-discription {
+    font-family: 'Open Sans', sans-serif;
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.64;
+    margin-top: 25px;
+}
+/* people-says xs */
+.people-says {
+    position: relative;
 }
 .swiper-container {
     width: 100%;
     padding-bottom: 50px;
+}
+.rewiew-symbol {
+    margin-top: -25px;
+    display: none;
+}
+.rewiew-symbol span{
+    font-family: "Times New Roman";
+    color: #fcdb5a;
+    font-size: 100px;
+    font-weight: 700;
 }
 .swiper-slide {
     cursor: pointer;
@@ -314,6 +375,7 @@ nav {
     font-size: 18px;
     line-height: 1.2;
 }
+
 /* adaptation */
 
 @media(min-width:375px) {
@@ -372,10 +434,33 @@ nav {
     .services {
         padding-bottom: 50px;
     }
+    /* for-you min 768 */
+    .for-you {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    /* recipes min 768 */
+    .recipes {
+        margin-top: -60px;
+        padding-bottom: 100px;
+    }
+    .recipes-item-row {
+        flex-direction: row;
+    }
+    .recipes-item-reverse-row {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    .recipes-item-content {
+        padding: 30px;
+    }
     /* people-says min 768 */
     .swiper-slide {
         padding-left: 5px;
         padding-right: 5px;
+    }
+    .rewiew-symbol {
+        display: block;
     }
 }
 
@@ -407,6 +492,14 @@ nav {
     /* services min 992 */
     .services {
         padding-bottom: 90px;
+    }
+    /* for-you min 992 */
+    .for-you{
+        padding-bottom: 150px;
+    }
+    /* recipes min 992 */
+    .recipes-item-content {
+        padding: 15px;
     }
 
 }
