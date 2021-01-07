@@ -27,7 +27,7 @@ img {
     display: block;
     margin-bottom: -25px;
     position: relative;
-    z-index: 6;
+    z-index: 21;
 }
 .logo-img {
     width: 70px;
@@ -42,8 +42,6 @@ nav {
 }
 .menu-list {
     display: flex;
-}
-.menu-item {
 }
 .menu-link {
     font-family: 'Open Sans', sans-serif;
@@ -92,10 +90,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 70% 0;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-
+    padding-bottom: 71%;
 }
 .title-h1 {
     font-family: 'Dancing Script', cursive;
@@ -103,9 +98,9 @@ nav {
     color: #ffffff;
     padding: 100px 0;
 }
-/* awesome */
+/* awesome xs*/
 .awesome {
-    margin-top: -900px;
+    margin-top: -250px;
 }
 .awesome-row {
     flex-direction: row;
@@ -171,9 +166,6 @@ nav {
     padding-top: 70px;
     padding-bottom: 70px;
 }
-.slogan-row {
-    flex-direction: column;
-}
 .slogan-text {
     margin-top: 35px;
 }
@@ -228,6 +220,7 @@ nav {
 }
 .services-row {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 .services-item {
@@ -306,12 +299,69 @@ nav {
     justify-content: center;
     background-color: #ffffff;
 }
+.recipes-item-content .title__h5 {
+    text-align: left;
+}
 .recipes-discription {
     font-family: 'Open Sans', sans-serif;
     color: #666666;
     font-size: 14px;
     line-height: 1.64;
     margin-top: 25px;
+}
+.recipes-item-column {
+    overflow: hidden;
+}
+.recipes-item-column:hover .recipes-img {
+    transform: scale(1.2);
+    transition: all 1s ease;
+}
+/* tasty xs */
+.tasty {
+    background-image: url(images/tasty.jpg);
+    background-repeat: no-repeat;
+    background-position: 40% 0;
+    position: relative;
+}
+.tasty-column {
+    padding-top: 280px;
+    padding-bottom: 140px;
+}
+.tasty-title {
+    font-family: 'Dancing Script', cursive;
+    color: #ccaf8a;
+    font-size: 100px;
+    line-height: 0.78;
+}
+.tasty-label {
+    position: absolute;
+    top: 7%;
+    right: 20%;
+}
+/* progress xs */
+.progress-column {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.progress__img {
+    margin-right: 30px;
+}
+.progress-img {
+    width: auto;
+}
+.progress-count {
+    color: #2e211d;
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: none;
+}
+.progress-title {
+    color: #555555;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 3.13;
+
 }
 /* people-says xs */
 .people-says {
@@ -385,6 +435,9 @@ nav {
 @media(min-width:576px) {
     .title-h1 {
         font-size: 130px;
+        padding-top: 150px;
+        padding-bottom: 0;
+        
     }
     .rewiew-author__title {
         flex-direction: row;
@@ -396,9 +449,13 @@ nav {
     /* home min 768 */
     .title-h1 {
         font-size: 200px;
-        padding: 150px 0;
+        padding-top: 200px;
+        padding-bottom: 100px;
     }
     /* awesome min 768 */
+    .awesome {
+        margin-top: -550px;
+    }
     .awesome-row {
         position: relative;
     }
@@ -454,6 +511,21 @@ nav {
     .recipes-item-content {
         padding: 30px;
     }
+    /* tasty */
+    .tasty {
+        background-position: right;
+    }
+    .tasty-column {
+        padding-top: 160px;
+    }
+    .tasty-title {
+        font-size: 230px;
+    }
+    /* progress min 768 */
+    .progress-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     /* people-says min 768 */
     .swiper-slide {
         padding-left: 5px;
@@ -498,19 +570,26 @@ nav {
         padding-bottom: 150px;
     }
     /* recipes min 992 */
+    .recipes-row {
+        flex-direction: row;
+    }
     .recipes-item-content {
         padding: 15px;
     }
-
 }
 
 /* desctop lg*/
 @media(min-width:1200px) {
+    /* home min 1200 */
     .title-h1 {
-        padding: 200px 0;
+        padding-top: 250px;
+    }
+    /* awesome min 1200 */
+    .awesome {
+        margin-top: -750px;
     }
     .awesome-body {
-        padding-bottom: 300px;
+        padding-bottom: 100px;
     }
     /* slogan min 1200 */
     .slogan-title {
@@ -531,7 +610,7 @@ nav {
         width: 21px;
         height: 21px;
         position: relative;
-        z-index: 6;
+        z-index: 21;
     }
     .nav-mobile-menu span {
         height: 3px;
@@ -570,6 +649,7 @@ nav {
         background-repeat: no-repeat;
         background-position: 60% 40%;
         justify-content: center;
+        z-index: 19;
     }
     .nav-mobile-menu.active-menu span:nth-child(1) {
         top: 50%;
@@ -586,7 +666,7 @@ nav {
         opacity: 1;
         visibility: visible;
         transform: translateX(0);
-        z-index: 5;
+        z-index: 20;
     }
     .menu-list {
         height: 100%;
