@@ -16,9 +16,18 @@ img {
 /* header xs */
 .header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    position: absolute;
+    position: fixed;
     width: 100%;
+    z-index: 25;
+    transition: all .3s ease;
 }
+.out {
+    transform: translateY(-150%);
+}
+.header-scroll {
+    background: rgba(0,0,0, 0.5);
+}
+
 .header-row {
     flex-direction: row;
     align-items: center;
@@ -70,6 +79,7 @@ nav {
     text-transform: uppercase;
     font-size: 12px;
     cursor: pointer;
+    border: none;
     outline: none;
     transition: background-color .25s ease-in-out;
     font-weight: 600;
@@ -79,6 +89,7 @@ nav {
     color: #1b1b1b;
     /* margin-left: auto; */
     display: none;
+    
 }
 .get-in-touch-btn:hover {
     background-color: #fcdb5a;
@@ -102,6 +113,10 @@ nav {
 .awesome {
     margin-top: -250px;
 }
+.awesome-body {
+    padding-right: 15px;
+    padding-left: 15px;
+}
 .awesome-row {
     flex-direction: row;
     flex-wrap: wrap;
@@ -124,6 +139,7 @@ nav {
 .awesome-img {
     object-fit: cover;
     height: 280px;
+    transition: transform 1s;
 }
 .awesome-img-vertical {
     height: 560px;
@@ -132,26 +148,28 @@ nav {
     position: absolute;
     padding: 30px;
     top: 0;
-    bottom: 0;
-    right: 0;
     left: 0;
-}
-.awesome-link {
     height: 100%;
     width: 100%;
-    text-decoration: none;
     display: flex;
     align-items: flex-end;
 }
-.awesome-gold-link {
-    align-items: center;
-    justify-content: center;
+.awesome-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
 .awesome-item-title {
     color: #ffffff;
     font-size: 30px;
     font-weight: 100;
     text-transform: uppercase;
+}
+.gold-content {
+    align-items: center;
+    justify-content: center;
 }
 .gold-font {
     color: #fcdb5a;
@@ -316,6 +334,9 @@ nav {
     transform: scale(1.2);
     transition: all 1s ease;
 }
+.recipes-img {
+    transition: transform 1s;
+}
 /* tasty xs */
 .tasty {
     background-image: url(images/tasty.jpg);
@@ -343,12 +364,16 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 30px;
 }
 .progress__img {
     margin-right: 30px;
 }
 .progress-img {
     width: auto;
+}
+.progress__text {
+    font-family: 'Open Sans', sans-serif;
 }
 .progress-count {
     color: #2e211d;
@@ -359,9 +384,52 @@ nav {
 .progress-title {
     color: #555555;
     font-size: 16px;
-    font-weight: bold;
-    line-height: 3.13;
+    font-weight: 800;
+    margin-top: 10px;
 
+}
+/* products xs*/
+.products-item {
+    position: relative;
+    overflow: hidden;
+} 
+.products-item:hover .products-content {
+    opacity: 1;
+}
+.products-item:hover .products-img {
+    transform: scale(1.2);
+    transition: all 1s ease-out;
+}
+.products-img {
+    transition: transform 1s;
+}
+.products-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(36,22,16,.7);
+    opacity: 0;
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 1s ease-out;
+}
+.products-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.fancy {
+    /* display: none; */
+    
 }
 /* people-says xs */
 .people-says {
@@ -522,7 +590,7 @@ nav {
         font-size: 230px;
     }
     /* progress min 768 */
-    .progress-row {
+    .progress-row, .products-row {
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -644,10 +712,10 @@ nav {
         transform: translateX(150%);
         transition: all 500ms ease-in-out;
         padding: 50px;
-        background-image: url(images/bg-home-mobile-menu.jpg);
+        background-image: url(images/mobile-bgd.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: 60% 40%;
+        background-position: 30% 0;
         justify-content: center;
         z-index: 19;
     }
@@ -672,14 +740,13 @@ nav {
         height: 100%;
         flex-direction: column;
         justify-content: center;
-        padding-right: 80px;
     }
     .menu-item {
         display: flex;
         padding: 8px;
     }
     .menu-link {
-        font-size: 24px;
+        font-size: 30px;
         padding: 3px;
         text-transform: uppercase;
     }

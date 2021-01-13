@@ -18,15 +18,35 @@
 
     // slider
 
-    // new Swiper('.swiper-container');
-    new Swiper('.swiper-container', {
-        loop: true,
-      
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
         },
+    });
 
-      })
+    // header-scroll
+
+    var header = $('.header'),
+	scrollPrev = 0;
+
+    $(window).scroll(function() {
+        var scrolled = $(window).scrollTop();
+    
+        if ( scrolled > 100 && scrolled > scrollPrev ) {
+            header.addClass('out');
+        } else {
+            header.addClass('header-scroll');
+            header.removeClass('out');
+        }
+        scrollPrev = scrolled;
+    });
+
 
 // })
