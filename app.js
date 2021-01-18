@@ -1,4 +1,4 @@
-// $(document).ready(function () {
+$(document).ready(function () {
 
     // mobile-menu
 
@@ -48,5 +48,31 @@
         scrollPrev = scrolled;
     });
 
+    // progress-counter
 
-// })
+    var updateTimer = function() {
+        var cell = document.querySelector(".progress-counter");
+        var count = Number(cell.innerHTML);
+        if(count<350) {
+            cell.innerHTML = count += 1;
+        }
+    };
+      
+    setInterval(updateTimer, 10);
+
+
+    // fancy
+
+    // let showBtn = document.querySelector(".show-btn");
+    function fancy() {
+        let fancy = document.querySelector(".fancybox-container");
+        console.log(fancy);
+    }
+    
+    fancy();
+    // showBtn.addEventListener("click", function () {
+    //     fancy.style.display = "block";
+    // })
+
+
+})
