@@ -76,7 +76,6 @@ $(document).ready(function () {
         ]
     });
 
-
     // header-scroll
 
     var header = $('.header'),
@@ -98,7 +97,6 @@ $(document).ready(function () {
 
     let cell = document.querySelectorAll(".progress-count");
     
-
     let updateTimer = function() {
         cell.forEach(item => {
             let count = +item.innerHTML;
@@ -110,19 +108,5 @@ $(document).ready(function () {
         })
     } 
     setInterval(updateTimer, 5);
-
-    // fancy
-
-    // // let showBtn = document.querySelector(".show-btn");
-    // function fancy() {
-    //     let fancy = document.querySelector(".fancybox-container");
-    //     console.log(fancy);
-    // }
-
-    // fancy();
-    // showBtn.addEventListener("click", function () {
-    //     fancy.style.display = "block";
-    // })
-
 
 })
