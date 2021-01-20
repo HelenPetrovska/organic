@@ -396,15 +396,15 @@ nav {
     position: relative;
     overflow: hidden;
 } 
-.products-item:hover .products-content {
-    opacity: 1;
+.products-image {
+    overflow: hidden;
 }
-.products-item:hover .products-img {
+.fancy-img {
+    transition: transform 1s;
+}
+.products-item:hover .fancy-img {
     transform: scale(1.2);
     transition: all 1s ease-out;
-}
-.products-img {
-    transition: transform 1s;
 }
 .products-content {
     position: absolute;
@@ -423,13 +423,20 @@ nav {
     font-weight: bold;
     transition: all 1s ease-out;
 }
-.products-link {
+.products-item:hover .products-content {
+    opacity: 1;
+}
+.products-item:hover .products-img {
+    transform: scale(1.2);
+    transition: all 1s ease-out;
+}
+/* .products-link {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-}
+} */
 
 /* people-says xs */
 .people-says {

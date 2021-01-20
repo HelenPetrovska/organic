@@ -269,7 +269,7 @@
                             <img src="images/progress-icon1.png" alt="progress-icon" class="progress-img">
                         </div>
                         <div class="progress__text">
-                            <p class="progress-count" id="progress-counter">0350</p>
+                            <p class="progress-count" data-from="0" data-to="350">0</p>
                             <!-- <span class="progress-count-maxValue">350</span> -->
                             <p class="progress-title">Muffins</p>
                         </div>
@@ -279,7 +279,7 @@
                             <img src="images/progress-icon2.png" alt="progress-icon" class="progress-img">
                         </div>
                         <div class="progress__text">
-                            <p class="progress-count">0158</p>
+                            <p class="progress-count" data-from="0" data-to="158">0</p>
                             <!-- <span class="progress-count-maxValue">158</span> -->
                             <p class="progress-title">Cakes</p>
                         </div>
@@ -289,7 +289,7 @@
                             <img src="images/progress-icon3.png" alt="progress-icon" class="progress-img">
                         </div>
                         <div class="progress__text">
-                            <p class="progress-count">0500</p>
+                            <p class="progress-count" data-from="0" data-to="500">0</p>
                             <!-- <span class="progress-count-maxValue">500</span> -->
                             <p class="progress-title">Cupcakes</p>
                         </div>
@@ -299,7 +299,7 @@
                             <img src="images/progress-icon4.png" alt="progress-icon" class="progress-img">
                         </div>
                         <div class="progress__text">
-                            <p class="progress-count">0685</p>
+                            <p class="progress-count" data-from="0" data-to="685">0</p>
                             <!-- <span class="progress-count-maxValue">685</span> -->
                             <p class="progress-title">Doughnut</p>
                         </div>
@@ -310,73 +310,76 @@
         <section class="products">
             <div class="row products-row">
                 <div class="products-item col-xs-12 col-sm-6 col-md-3">
-                    <img src="images/products1.jpg" alt="products-img" class="products-img">
-                    <div class="products-content">
-                        <h4 class="title__h4">Testy Jam</h4>
+                    <div class="products-image">
+                        <a data-fancybox="gallery" href="images/products1.jpg" class="products-link"><img src="images/products1.jpg" class="fancy-img">
+                            <div class="products-content">
+                                <h4 class="title__h4">Testy Jam</h4>
+                            </div>
+                        </a>
                     </div>
-                    <a href="#" class="products-link"></a>
                 </div>
                 <div class="products-item col-xs-12 col-sm-6 col-md-3">
-                    <img src="images/products2.jpg" alt="products-img" class="products-img">
-                    <div class="products-content">
-                        <h4 class="title__h4">Cristmas sweets</h4>
+                    <div class="products-image">
+                        <a data-fancybox="gallery" href="images/products2.jpg" class="products-link"><img src="images/products2.jpg" class="fancy-img">
+                            <div class="products-content">
+                                <h4 class="title__h4">Cristmas sweets</h4>
+                            </div>
+                        </a>
                     </div>
-                    <a href="#" class="products-link"></a>
                 </div>
                 <div class="products-item col-xs-12 col-sm-6 col-md-3">
-                    <img src="images/products3.jpg" alt="products-img" class="products-img">
-                    <div class="products-content">
-                        <h4 class="title__h4">Awesome dishes</h4>
-                    </div>
-                    <a href="#" class="products-link"></a>
+                    <div class="products-image">
+                        <a data-fancybox="gallery" href="images/products3.jpg" class="products-link"><img src="images/products3.jpg" class="fancy-img">
+                            <div class="products-content">
+                                <h4 class="title__h4">Awesome dishes</h4>
+                            </div>
+                        </a>
+                    </div>                
                 </div>
                 <div class="products-item col-xs-12 col-sm-6 col-md-3">
-                    <img src="images/products4.jpg" alt="products-img" class="products-img">
-                    <div class="products-content">
-                        <h4 class="title__h4">Tasty desert</h4>
+                    <div class="products-image">
+                        <a data-fancybox="gallery" href="images/products4.jpg" class="products-link"><img src="images/products4.jpg" class="fancy-img">
+                            <div class="products-content">
+                                <h4 class="title__h4">Tasty desert</h4>
+                            </div>
+                        </a>
                     </div>
-                    <a href="#" class="products-link"></a>
                 </div>
+
+
                 <div class="products-item col-xs-12 col-sm-6 col-md-3">
-                    <img src="images/products5.jpg" alt="products-img" class="products-img">
                     <div class="products-content">
                         <h4 class="title__h4">Nuts</h4>
                     </div>
-                    <a href="#" class="products-link"></a>
+                    <div class="products-image">
+                        <a data-fancybox="gallery" href="images/products5.jpg" сlass="products-link"><img src="images/products5.jpg" class="fancy-img"></a>
+                    </div>
                 </div>
                 <div class="products-item col-xs-12 col-sm-6 col-md-3">
-                    <img src="images/products6.jpg" alt="products-img" class="products-img">
                     <div class="products-content">
                         <h4 class="title__h4">Jam</h4>
                     </div>
-                    <a href="#" class="products-link"></a>
+                    <div class="products-image">
+                        <a data-fancybox="gallery" href="images/products6.jpg" сlass="products-link"><img src="images/products6.jpg" class="fancy-img"></a>
+                    </div>
                 </div>
                 <div class="products-item col-xs-12 col-sm-6 col-md-3">
-                    <img src="images/products7.jpg" alt="products-img" class="products-img">
                     <div class="products-content">
                         <h4 class="title__h4">Honey</h4>
                     </div>
-                    <a href="#" class="products-link"></a>
+                    <div class="products-image">
+                        <a data-fancybox="gallery" href="images/products7.jpg" сlass="products-link"><img src="images/products7.jpg" class="fancy-img"></a>
+                    </div>
                 </div>
                 <div class="products-item col-xs-12 col-sm-6 col-md-3">
-                    <img src="images/products8.jpg" alt="products-img" class="products-img">
                     <div class="products-content">
                         <h4 class="title__h4">Bread</h4>
                     </div>
-                    <a href="#" class="products-link"></a>
+                    <div class="products-image">
+                        <a data-fancybox="gallery" href="images/products8.jpg" сlass="products-link"><img src="images/products8.jpg" class="fancy-img"></a>
+                    </div>
                 </div>
             </div>
-            <div class="fancy">
-                <a data-fancybox="gallery" href="images/products1.jpg"><img src="small_1.jpg" class="fancy-img"></a>
-                <a data-fancybox="gallery" href="images/products2.jpg"><img src="small_2.jpg"  class="fancy-img"></a>
-                <a data-fancybox="gallery" href="images/products3.jpg"><img src="small_3.jpg"></a>
-                <a data-fancybox="gallery" href="images/products4.jpg"><img src="small_4.jpg"></a>
-                <a data-fancybox="gallery" href="images/products5.jpg"><img src="small_5.jpg"></a>
-                <a data-fancybox="gallery" href="images/products6.jpg"><img src="small_6.jpg"></a>
-                <a data-fancybox="gallery" href="images/products7.jpg"><img src="small_7.jpg"></a>
-                <a data-fancybox="gallery" href="images/products8.jpg"><img src="small_8.jpg"></a>
-            </div>
-            <button class="show-btn">show</button>
         </section>
         <section class="people-says section-padding">
             <img src="images/people-says.jpg" class="section-img" alt="people-says-img">

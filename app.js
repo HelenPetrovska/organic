@@ -97,29 +97,29 @@ $(document).ready(function () {
     // progress-counter
 
     let cell = document.querySelectorAll(".progress-count");
+    
 
     let updateTimer = function() {
         cell.forEach(item => {
             let count = +item.innerHTML;
-            let valueCount = item.textContent;
-            console.log(count);
-            console.log(valueCount);
-            if (count < 1000) {
-                item.innerHTML = count += 1;
+            let dataTo = +item.getAttribute("data-to");
+            // let dataFrom  = +item.getAttribute("data-from");
+            if (count < dataTo) {
+                item.innerHTML = count + 1;
             }
         })
     } 
-    setInterval(updateTimer, 10);
+    setInterval(updateTimer, 5);
 
     // fancy
 
-    // let showBtn = document.querySelector(".show-btn");
-    function fancy() {
-        let fancy = document.querySelector(".fancybox-container");
-        console.log(fancy);
-    }
+    // // let showBtn = document.querySelector(".show-btn");
+    // function fancy() {
+    //     let fancy = document.querySelector(".fancybox-container");
+    //     console.log(fancy);
+    // }
 
-    fancy();
+    // fancy();
     // showBtn.addEventListener("click", function () {
     //     fancy.style.display = "block";
     // })
