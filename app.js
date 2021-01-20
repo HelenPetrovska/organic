@@ -5,9 +5,9 @@ $(document).ready(function () {
     let mobileMenu = document.querySelector(".nav-mobile-menu");
     let mainMenu = document.querySelector(".navigation");
 
-    mobileMenu.addEventListener("click", function() {
+    mobileMenu.addEventListener("click", function () {
         mobileMenu.classList.toggle("active-menu");
-        if(mobileMenu.classList.contains("active-menu")) {
+        if (mobileMenu.classList.contains("active-menu")) {
             mainMenu.classList.add("active-menu");
             document.body.style.overflow = "hidden";
         } else {
@@ -16,30 +16,76 @@ $(document).ready(function () {
         }
     });
 
-    // slider
+    // sliders
 
     var swiper = new Swiper('.swiper-container', {
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
+            delay: 2500,
+            disableOnInteraction: false,
         },
         pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
+            el: '.swiper-pagination',
+            clickable: true,
         },
     });
+
+    $('.responsive').slick({
+        autoplay: true,
+        infinite: true,
+        dots: false,
+        speed: 1000,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+
 
     // header-scroll
 
     var header = $('.header'),
-	scrollPrev = 0;
+        scrollPrev = 0;
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var scrolled = $(window).scrollTop();
-    
-        if ( scrolled > 100 && scrolled > scrollPrev ) {
+
+        if (scrolled > 100 && scrolled > scrollPrev) {
             header.addClass('out');
         } else {
             header.addClass('header-scroll');
@@ -50,16 +96,20 @@ $(document).ready(function () {
 
     // progress-counter
 
-    var updateTimer = function() {
-        var cell = document.querySelector(".progress-counter");
-        var count = Number(cell.innerHTML);
-        if(count<350) {
-            cell.innerHTML = count += 1;
-        }
-    };
-      
-    setInterval(updateTimer, 10);
+    let cell = document.querySelectorAll(".progress-count");
 
+    let updateTimer = function() {
+        cell.forEach(item => {
+            let count = +item.innerHTML;
+            let valueCount = item.textContent;
+            console.log(count);
+            console.log(valueCount);
+            if (count < 1000) {
+                item.innerHTML = count += 1;
+            }
+        })
+    } 
+    setInterval(updateTimer, 10);
 
     // fancy
 
@@ -68,7 +118,7 @@ $(document).ready(function () {
         let fancy = document.querySelector(".fancybox-container");
         console.log(fancy);
     }
-    
+
     fancy();
     // showBtn.addEventListener("click", function () {
     //     fancy.style.display = "block";
