@@ -19,6 +19,10 @@
     flex: 0 0 16.66667%;
     max-width: 16.66667%;
 }
+.col-xs-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
 .col-xs-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
@@ -34,6 +38,10 @@
 .col-xs-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%;
+}
+.col-xs-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
 }
 .col-xs-12 {
     flex: 0 0 100%;
@@ -56,17 +64,33 @@
         flex: 0 0 8.33333%;
         max-width: 8.33333%;
     }
+    .col-sm-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
     .col-sm-4 {
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
+    }
+    .col-sm-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%;
     }
     .col-sm-6 {
         flex: 0 0 50%;
         max-width: 50%;
     }
+    .col-sm-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%;
+    }
     .col-sm-8 {
         flex: 0 0 66.66667%;
         max-width: 66.666667%;
+    }
+    .col-sm-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
     }
     .col-sm-11 {
         flex: 0 0 91.66667%;
@@ -112,6 +136,10 @@
     .col-md-8 {
         flex: 0 0 66.66667%;
         max-width: 66.666667%;
+    }
+    .col-md-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
     }
     .col-md-12 {
         flex: 0 0 100%;

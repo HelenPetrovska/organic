@@ -21,6 +21,7 @@ $(document).ready(function () {
     var swiper = new Swiper('.swiper-container', {
         spaceBetween: 30,
         centeredSlides: true,
+        loop: true,
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
@@ -93,6 +94,11 @@ $(document).ready(function () {
         scrollPrev = scrolled;
     });
 
+    
+    // AOS
+
+    AOS.init();
+
     // progress-counter
 
     let cell = document.querySelectorAll(".progress-count");
@@ -108,5 +114,34 @@ $(document).ready(function () {
         })
     } 
     setInterval(updateTimer, 5);
+
+        // modal
+
+        let modal = document.querySelector(".modal");
+        let subscribeBtn = document.querySelector(".subscribe-btn");
+        let subscribeCloseBtn = document.querySelector(".subscribe-close-btn");
+    
+        function openModal() {
+            modal.classList.add("show");
+            modal.classList.remove("hide");
+        }
+    
+        function closeModal(e) {
+            e.preventDefault();
+            modal.classList.add("hide");
+            modal.classList.remove("show");
+        }
+    
+        modal.addEventListener("click", function(e) {
+            if(e.target === modal) {
+                closeModal(e);
+            }
+        })
+
+        setTimeout(openModal, 10000);
+
+        subscribeCloseBtn.addEventListener("click", closeModal);
+        subscribeBtn.addEventListener("click", closeModal);
+
 
 })
