@@ -115,33 +115,53 @@ $(document).ready(function () {
     } 
     setInterval(updateTimer, 5);
 
-        // modal
+    // modal
 
-        let modal = document.querySelector(".modal");
-        let subscribeBtn = document.querySelector(".subscribe-btn");
-        let subscribeCloseBtn = document.querySelector(".subscribe-close-btn");
-    
-        function openModal() {
-            modal.classList.add("show");
-            modal.classList.remove("hide");
+    let modal = document.querySelector(".modal");
+    let subscribeBtn = document.querySelector(".subscribe-btn");
+    let subscribeCloseBtn = document.querySelector(".subscribe-close-btn");
+
+    function openModal() {
+        modal.classList.add("show");
+        modal.classList.remove("hide");
+    }
+
+    function closeModal(e) {
+        e.preventDefault();
+        modal.classList.add("hide");
+        modal.classList.remove("show");
+    }
+
+    modal.addEventListener("click", function(e) {
+        if(e.target === modal) {
+            closeModal(e);
         }
-    
-        function closeModal(e) {
-            e.preventDefault();
-            modal.classList.add("hide");
-            modal.classList.remove("show");
-        }
-    
-        modal.addEventListener("click", function(e) {
-            if(e.target === modal) {
-                closeModal(e);
-            }
+    })
+
+    setTimeout(openModal, 10000);
+
+    subscribeCloseBtn.addEventListener("click", closeModal);
+    subscribeBtn.addEventListener("click", closeModal);
+
+    // btn goTop
+
+    $(function () {
+        $('.scrollup').click(function () {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 1000);
         })
+    })
 
-        setTimeout(openModal, 10000);
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+    });
 
-        subscribeCloseBtn.addEventListener("click", closeModal);
-        subscribeBtn.addEventListener("click", closeModal);
+
 
 
 })

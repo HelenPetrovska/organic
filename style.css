@@ -671,11 +671,11 @@ nav {
 .social-link {
     padding: 7px;
 }
-.fa {
+.footer-fa {
     color:#535353;
     font-size: 18px;
 }
-.fa:hover, .footer-contacts__link:hover {
+.footer-fa:hover, .footer-contacts__link:hover {
     color: #fcdb5a;
 }
 .footer-copyright {
@@ -720,7 +720,7 @@ nav {
     z-index: 26;
 }
 .modal-block {
-    width: 85%;
+    width: 75%;
     position: relative;
     left: 0;
     right: 0;
@@ -786,6 +786,28 @@ nav {
 .hide {
     display: none;
 }
+
+/* btn goTop xs*/
+
+.scrollup {
+    position: fixed; 
+    right: 10px; 
+    bottom: 10px;
+    width: 44px;
+    height: 44px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    background-color: #fcd641;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    opacity: 0.7;
+    padding-top: 11px;
+  }
+  .scrollup:hover {
+    opacity: 1;
+  }
 
 /* aos */
 
@@ -942,6 +964,12 @@ nav {
     .subscribe-btn {
         margin-left: -10px;
         width: 147px;
+    }
+    /* btn goTop min 768*/
+
+    .scrollup {
+        right: 25px; 
+        bottom: 25px;
     }
 }
 
