@@ -50,7 +50,7 @@
 
 /* Адаптация */
 @media(min-width:426px) {
-    .container {
+.container {
     padding-left: 50px;
     padding-right: 50px;
 }

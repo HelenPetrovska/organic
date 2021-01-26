@@ -138,7 +138,7 @@ $(document).ready(function () {
         }
     })
 
-    setTimeout(openModal, 10000);
+    setTimeout(openModal, 3000);
 
     subscribeCloseBtn.addEventListener("click", closeModal);
     subscribeBtn.addEventListener("click", closeModal);
