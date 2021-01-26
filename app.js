@@ -34,6 +34,8 @@ $(document).ready(function () {
         spaceBetween: 30,
         centeredSlides: true,
         loop: true,
+        autoHeight: true,
+        speed: 1000,
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
