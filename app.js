@@ -4,6 +4,9 @@ $(document).ready(function () {
 
     let mobileMenu = document.querySelector(".nav-mobile-menu");
     let mainMenu = document.querySelector(".navigation");
+    let menuLinks = document.querySelectorAll(".menu-link");
+
+    console.log(menuLinks);
 
     mobileMenu.addEventListener("click", function () {
         mobileMenu.classList.toggle("active-menu");
@@ -15,6 +18,15 @@ $(document).ready(function () {
             document.body.style.overflow = "auto";
         }
     });
+
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            mainMenu.classList.remove("active-menu");
+            mobileMenu.classList.remove("active-menu");
+            document.body.style.overflow = "auto";
+
+        })
+    })
 
     // sliders
 
@@ -138,7 +150,7 @@ $(document).ready(function () {
         }
     })
 
-    setTimeout(openModal, 3000);
+    setTimeout(openModal, 30000);
 
     subscribeCloseBtn.addEventListener("click", closeModal);
     subscribeBtn.addEventListener("click", closeModal);
