@@ -6,8 +6,6 @@ $(document).ready(function () {
     let mainMenu = document.querySelector(".navigation");
     let menuLinks = document.querySelectorAll(".menu-link");
 
-    console.log(menuLinks);
-
     mobileMenu.addEventListener("click", function () {
         mobileMenu.classList.toggle("active-menu");
         if (mobileMenu.classList.contains("active-menu")) {
@@ -93,11 +91,11 @@ $(document).ready(function () {
 
     // header-scroll
 
-    var header = $('.header'),
+    let header = $('.header'),
         scrollPrev = 0;
 
     $(window).scroll(function () {
-        var scrolled = $(window).scrollTop();
+        let scrolled = $(window).scrollTop();
 
         if (scrolled > 100 && scrolled > scrollPrev) {
             header.addClass('out');
@@ -121,13 +119,20 @@ $(document).ready(function () {
         cell.forEach(item => {
             let count = +item.innerHTML;
             let dataTo = +item.getAttribute("data-to");
-            // let dataFrom  = +item.getAttribute("data-from");
+
             if (count < dataTo) {
-                item.innerHTML = count + 1;
+                item.innerHTML = +item.innerHTML + 1;
             }
         })
     } 
-    setInterval(updateTimer, 5);
+        // починає працювати
+    let progress = document.querySelector(".progress");
+
+    window.addEventListener('scroll', function() {
+        if (progress.offsetTop-200<pageYOffset) {
+            setInterval(updateTimer, 50);
+        }
+    })
 
     // modal
 
@@ -175,7 +180,32 @@ $(document).ready(function () {
         }
     });
 
+    // izotope
 
+    var $grid = $('.grid').isotope({
+        itemSelector: '.gallery-images-item',
+        layoutMode: 'masonry'
 
+      });
+
+    $('.filter-button-group').on( 'click', 'button', function() {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
+      });
+
+    // izotope без jquery
+
+    // const elem = document.querySelector('.grid');
+    // const iso = new Isotope( elem, {
+    //     itemSelector: '.gallery-images-item',
+    //     layoutMode: 'masonry'
+    // });
+    // document.querySelectorAll(".filter-btn").forEach(el => {
+    //     el.addEventListener("click", function(e) {
+    //         let filter = e.currentTarget.dataset.filter;
+    //         iso.arrange({filter: `${filter}`});
+    //     })
+    // })
+   
 
 })
